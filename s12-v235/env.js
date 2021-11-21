@@ -1,7 +1,7 @@
 import { apiKey } from './api.key';
 const variables = {
   development: {
-    googleApiKey: apiKey,
+    googleApiKey: apiKey, //key is in file api.key.js (export const apiKey = '...') - gitignored!
   },
   production: {
       googleApiKey: 'api key 4 production here...'
