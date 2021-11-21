@@ -1,0 +1,65 @@
+-tworzenie nowego projektu (bazuj¹cego na expo, nie na rect-native CLI): expo init nazwa-projektu, wybraæ template 'blank'
+-tworzenie symlinku do node modules: np. mklink /d node_modules d:\React\Udemy-ReactNative\node_modules
+-uruchamianie:
+- yarn start - uruchamia expo - potem mo¿na zeskanowaæ QRkod na komórce (apk¹ expoGo) albo klikn¹æ 'Run on Android device/emulator'
+- yarn android - uruchamia expo i od razu uruchamia projekt na komórce/emulatorze
+
+sec2(18-41): COURSE GOALS APP (basics)
+basic components: 
+ -View, Text, TextInput, Button, Modal, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, TouchableWithoutFeedback
+ -ScrollView, FlatList (ScrollView renderuje ca³¹ listê - nawet elementy, które nie mieszcz¹ siê na ekranie, FlatList jest lepsze dla d³ugich list - renederuje tylko te elementy, które maj¹ siê pojawiæ)
+ -styling: inline, StyleSheet object
+
+sec3(42-51): debugging
+
+sec4(52-88): GUESS A NUMBER APP (components, styling, layouts)
+ -Keyboard(API), Alert(API), 
+ -custom fonts (expo install expo-font, expo install expo-app-loading, AppLoading)
+ -custom styles: custom, styled component vs global style object
+ -Image(local/web images)
+ -icons (Ionicons, MaterialIcons...)
+ -styling ScrollView/FlatList - nie style={} ale contentContainerStyle={}, flexGrow=1 vs flex=1
+
+sec5(89-107): (responsive apps)
+ Dimensions(API), KeyboardAvoidingView, ScreenOrientation(expoAPI), Platform(API), SafeAreaView
+
+sec6(108-149): THE MEALS APP (navigation)
+-nawigacja: react-navigation (wbrew nazwie to nawigacja dla react-native, nie dla react). instalacja: npm/yarn... + expo...  (https://reactnavigation.org/docs/4.x/getting-started)
+  -StackNavigator (npm/yarn: react-navigation-stack): .navigate()/.push(), .goBack()/.pop(), .popToTop(), .replace()
+  -TabsNavigator (npm/yarn: react-navigation-tabs, react-navigation-material-bottom-tabs, react-native-paper)
+  -DrawerNavigator (npm/yarn: react-navigation-drawer)
+-ImageBackground 
+-navigation header title (also dynamic), navigation header button (npm/yarn: react-navigation-header-buttons)
+
+sec7(150-162): (state, redux)
+-Redux (npm/yarn: redux, react-redux)
+
+sec8(163-190): THE SHOP APP
+npm install --save (yarn add) redux react-redux react-navigation react-navigation-header-buttons
+expo install react-native-gesture-handler react-native-reanimated
+redux debugging (172): npm install --save-dev (yarn add --dev) redux-devtools-extension -> import composeWithDevTools
+npm install --save (yarn add) moment
+
+sec9(191-200): (user input, validation)
+-TextInput, walidacja
+-useReducer (alternative to useState for more complex states), useReducer hook is NOT related to the Redux!
+
+sec10(201-215): (Firebase, http requests)
+-Redux Thunk - running async code in redux action creators (npm/yarn: redux-thunk)
+-ActivityIndicator - built-in RN spinner
+-'pull down to refresh' (for flatList)
+
+sec11(216-231): (user authentication):
+-SwitchNavigator - nawigator dla ekranu logowania (aby po zalogowaniu 'back' nie wróci³o do ekranu logowania)
+-LinearGradient (npm/yarn: expo-linear-gradient)
+-AcyncStorage (expo install @react-native-async-storage/async-storage)
+-useRef
+
+sec12(232-261): GREAT PLACES APP
+-yarn add react-navigation | expo install react-native-gesture-handler react-native-reanimated | yarn add react-navigation-stack
+-yarn add react-navigation-header-buttons@6
+-yarn add redux | yarn add react-redux | yarn add redux-thunk
+-ImagePicker (camera): expo install expo-image-picker
+-FileSystem: expo install expo-file-system
+-local database: SQLite: expo install expo-sqlite
+-user location: Location: expo install expo-location
