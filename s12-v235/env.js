@@ -4,7 +4,7 @@ const variables = {
     googleApiKey: apiKey, //key is in file api.key.js (export const apiKey = '...') - gitignored!
   },
   production: {
-      googleApiKey: 'api key 4 production here...'
+    googleApiKey: 'api key 4 production here...'
   }
 };
 

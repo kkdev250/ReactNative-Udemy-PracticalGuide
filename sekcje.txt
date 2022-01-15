@@ -63,3 +63,4 @@ sec12(232-261): GREAT PLACES APP
 -FileSystem: expo install expo-file-system
 -local database: SQLite: expo install expo-sqlite
 -user location: Location: expo install expo-location
+-maps: expo install react-native-maps
