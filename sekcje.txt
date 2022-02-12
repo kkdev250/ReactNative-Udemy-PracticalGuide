@@ -65,8 +65,10 @@ sec12(232-261): GREAT PLACES APP
 -user location: Location: expo install expo-location
 -maps: expo install react-native-maps
 
-sec.13(262-271): (apps without expo, react-native cli)
+sec.13(262-271): (apps without EXPO (i.e.Expo Managed Workflow): react-native cli, expo bare workflow)
 -tworzenie nowego projektu (bazuj¹cego rect-native CLI): react-native init nazwa-projektu (lub npx react-native init nazwa-projektu)
 -uruchamianie: react-native run-android (lub npx react-native run-android)
 -Image Picker (not expo's): npm install --save react-native-image-picker@2
-
+-tworzenie nowego projektu (bazuj¹cego na Expo Bare Workflow): expo init nazwa-projektu, wybraæ template 'bare-minimum'
+-uruchamianie: yarn android lub npx react-native run-android
+-ejecting from Expo Managed Workflow into Expo Bare Workflow (e.g. when development is done): expo eject
