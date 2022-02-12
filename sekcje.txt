@@ -68,3 +68,5 @@ sec12(232-261): GREAT PLACES APP
 sec.13(262-271): (apps without expo, react-native cli)
 -tworzenie nowego projektu (bazuj¹cego rect-native CLI): react-native init nazwa-projektu (lub npx react-native init nazwa-projektu)
 -uruchamianie: react-native run-android (lub npx react-native run-android)
+-Image Picker (not expo's): npm install --save react-native-image-picker@2
+
