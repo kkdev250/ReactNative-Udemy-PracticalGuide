@@ -72,3 +72,9 @@ sec.13(262-271): (apps without EXPO (i.e.Expo Managed Workflow): react-native cl
 -tworzenie nowego projektu (bazuj¹cego na Expo Bare Workflow): expo init nazwa-projektu, wybraæ template 'bare-minimum'
 -uruchamianie: yarn android lub npx react-native run-android
 -ejecting from Expo Managed Workflow into Expo Bare Workflow (e.g. when development is done): expo eject
+
+sec.14(272-282): (publishing apps)
+-expo publish (publishing to expo servers)
+-expo build:android -t app-bundle, expo build:ios (building standalone apps, with OTA update support)
+-expo upload:android, expo upload:ios (uploading to app store)
+-building, uploading without expo
