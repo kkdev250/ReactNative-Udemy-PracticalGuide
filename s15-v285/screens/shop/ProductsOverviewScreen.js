@@ -40,12 +40,10 @@ const ProductsOverviewScreen = props => {
   //..contrarty to StackNavigator where when you leave the screen it's destroyed and then re-created in next visit
   //so to fetch data after each subsequent navigate to this screen we have to setup a drawer navigator listener:
   useEffect(() => {
-    const willFocusSub = props.navigation.addListener('willFocus', () => {
-      loadProducts();
-    });
+    const unsubscribe = props.navigation.addListener('focus', loadProducts);
 
     return () => {
-      willFocusSub.remove();
+      unsubscribe();
     };
   }, [loadProducts]);
 
