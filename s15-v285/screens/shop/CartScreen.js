@@ -72,7 +72,7 @@ const CartScreen = props => {
   );
 };
 
-CartScreen.navigationOptions = navData => {
+export const screenOptions =  navData => {
   return {
     title: 'Your Cart',
   }
