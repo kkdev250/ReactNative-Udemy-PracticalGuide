@@ -78,3 +78,6 @@ sec.14(272-282): (publishing apps)
 -expo build:android -t app-bundle, expo build:ios (building standalone apps, with OTA update support)
 -expo upload:android, expo upload:ios (uploading to app store)
 -building, uploading without expo
+
+sec.15(283-297): (React Navigation 5, THE SHOP APP)
+-expo upgrade (upgradin the expo itself)
