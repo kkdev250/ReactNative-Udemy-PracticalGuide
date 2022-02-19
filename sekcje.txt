@@ -81,3 +81,8 @@ sec.14(272-282): (publishing apps)
 
 sec.15(283-297): (React Navigation 5, THE SHOP APP)
 -expo upgrade (upgradin the expo itself)
+-expo install react-native-reanimated, https://docs.expo.dev/versions/v44.0.0/sdk/reanimated/
+-https://stackoverflow.com/questions/67840220/getting-typeerror-interpolate-is-not-a-function-in-react-native
+-app user: test@test.com  pass: 123456
+-yarn add @react-navigation/native@^5.x
+-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
