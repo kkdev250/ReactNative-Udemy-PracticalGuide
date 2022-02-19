@@ -45,7 +45,8 @@ const EditProductScreen = props => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
 
-  const prodId = props.navigation.getParam('productId');
+  //const prodId = props.navigation.getParam('productId'); //react navigation 4.x
+  const prodId = props.route.params ? props.route.params.productId : null;
   const editedProduct = useSelector(state => 
     state.products.userProducts).find(prod => prod.id === prodId
   ); //if set - we're editing, if undefined - we're adding a new product
@@ -115,7 +116,17 @@ const EditProductScreen = props => {
   }, [dispatch, prodId, formState]);
 
   useEffect(() => {
-    props.navigation.setParams({submit: submitHandler});
+    props.navigation.setOptions({
+      headerRight: () => (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
+          <Item
+            title="Save"
+            iconName={Platform.OS === 'android' ? 'md-checkmark' : 'ios-checkmark'}
+            onPress={submitHandler}
+          />
+        </HeaderButtons>
+      ),
+    });
   }, [submitHandler]);
 
   const inputChangeHandler = useCallback((inputIdentifier, inputValue, inputValidity) => { //useCallback because inputChangeHandler (via onInputChange prop) is a dependency in useEffect in Input.js
@@ -200,21 +211,11 @@ const EditProductScreen = props => {
 };
 
 export const screenOptions = navData => {
-  const submitFn = navData.navigation.getParam('submit');
-
+  const routeParams = navData.route.params ? navData.route.params : {};
   return {
-    title: navData.navigation.getParam('productId') 
+    title: routeParams.productId
       ? 'Edit Product'
       : 'Add Product',
-    headerRight: () => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="Save"
-          iconName={Platform.OS === 'android' ? 'md-checkmark' : 'ios-checkmark'}
-          onPress={submitFn}
-        />
-      </HeaderButtons>
-    ),
   }
 };
 
