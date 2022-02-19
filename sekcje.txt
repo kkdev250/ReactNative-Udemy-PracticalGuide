@@ -86,3 +86,5 @@ sec.15(283-297): (React Navigation 5, THE SHOP APP)
 -app user: test@test.com  pass: 123456
 -yarn add @react-navigation/native@^5.x
 -expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+-yarn add @react-navigation/stack@^5.x
+-yarn add @react-navigation/drawer@^5.x
