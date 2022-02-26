@@ -6,12 +6,23 @@ import * as Font from 'expo-font';
 //import { composeWithDevTools } from 'redux-devtools-extension'; //enables redux debugging in react-native-debugger
 import { LogBox } from "react-native";
 import ReduxThunk from 'redux-thunk';
+import * as Notifications from 'expo-notifications';
 
 import productsReducer from './store/reducers/products';
 import cartReducer from './store/reducers/cart';
 import ordersReducer from './store/reducers/orders';
 import authReducer from './store/reducers/auth';
 import AppNavigator from './navigation/AppNavigator';
+
+Notifications.setNotificationHandler({ //configuring notifications when app is foreground
+  handleNotification: async () => {
+    return {
+      shouldShowAlert: true,
+      shouldPlaySound: true,
+      shouldSetBadge: true,
+    };
+  },
+})
 
 const rootReducer = combineReducers({
   products: productsReducer,
