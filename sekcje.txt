@@ -89,7 +89,7 @@ sec.15(283-297): (React Navigation 5, THE SHOP APP)
 -yarn add @react-navigation/stack@^5.x
 -yarn add @react-navigation/drawer@^5.x
 
-sec.16(298-315): (local and push notifications)
+sec.16(298-315): (local and push notifications: dummy test app, THE SHOP APP)
 -expo install expo-notifications
 --to get expo push token first create a expo free account: https://expo.dev/signup (jtestowy2016@gmail.com, jtestowy2016, Qwerty123!
 --next in console: expo login, yarn android
